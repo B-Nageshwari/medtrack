@@ -1,0 +1,262 @@
+<!-- Additional Container -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ebf6fa; /* Grey background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* Logo styling */
+        .logo {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #333; /* Dark background for the navigation bar */
+            overflow: hidden;
+            width: 100%; /* Set the width to 100% for full-width */
+            margin-top: 20px; /* Add margin to move it down */
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd; /* Highlight on hover */
+            color: rgb(0, 0, 0);
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            padding: 14px 16px;
+        }
+
+        .navbar a, .dropdown .dropbtn {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: rgba(0, 0, 0, 0.322);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Container Rows */
+        .container-rows {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 80%;
+            max-width: 1200px;
+            margin-top: 20px; /* Add margin to move it down */
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* Updated container class */
+        .container {
+            background-color: #fff; /* White background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            margin: 10px; /* Add a margin to separate containers */
+            width: calc(50% - 20px); /* 50% width for each container with margin */
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s; /* Add a smooth transition */
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            align-items: center; /* Center content horizontally */
+            justify-content: flex-end; /* Align content at the bottom */
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0; /* Grey color */
+            z-index: -1; /* Place it behind the container content */
+        }
+
+        .container:hover {
+            transform: scale(1.05); /* Scale up on hover */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Change box-shadow on hover */
+        }
+
+        /* Updated h2 styles */
+        h2 {
+            text-align: center;
+            text-decoration: none;
+            flex-grow: 1; /* Make the content grow to fill the container */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Align content at the bottom */
+            border-bottom: 2px solid transparent; /* Add transparent border */
+        }
+
+        /* Remove underline from anchor elements in containers */
+        .container a {
+            text-decoration: none;
+        }
+
+        /* Image styling */
+        .container img {
+            max-width: 100%; /* Adjust the image size */
+            margin-bottom: 10px; /* Add space between image and content */
+            height: auto; /* Allow the image to adjust its height */
+            max-height: 200px; /* Limit the maximum height of the image */
+        }
+
+        /* Responsive Adjustments */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 250px; /* Increase the container size for larger screens */
+            }
+        }
+
+        /* Additional Container Box */
+        .additional-container {
+            background-color:  #ffffff; /* White background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            margin: 20px; /* Add margin to separate from other content */
+            width: 90%; /* Set the width */
+            max-width: 1700px; /* Set the maximum width */
+            padding: 100px; /* Add padding for content */
+            text-align: center; /* Center text */
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="vvalogo.jpeg" alt="Logo" style="max-width: 200px;">
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a style="float: right;" href="#">Contact us</a>
+        <a style="float: right;" href="#">FAQ</a>
+        <a style="float: right;" href="#">About</a>
+    </div>
+
+    <!-- Additional Container -->
+    <div class="additional-container">
+        <!-- Create a flex container to place content and image side by side -->
+        <div style="display: flex; align-items: center;">
+            <!-- Content on the left side -->
+            <div style="flex: 1;">
+                <h1 style="color: rgb(46, 24, 169);">PREVENTION IS BETTER THAN CURE</h1>
+                <!-- Left-align the content within the paragraph -->
+                <p style="text-align: left;">
+                    A medical management system on a website typically involves features such as appointment scheduling, patient records management, prescription management, and often integration with electronic health records (EHR) systems. Users, including healthcare professionals and patients, can access and update their information securely, facilitating efficient communication and streamlined healthcare processes.
+                </p>
+                <h2 style="color: rgb(63, 225, 236);">Have a good day!</h2>
+            </div>
+            <!-- Image on the right side -->
+            <div style="flex: 1;">
+                <img src="vvcontimg.jpeg" alt="Image" style="max-width: 100%;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Container Rows -->
+    <div class="container-rows">
+        <!-- First Row -->
+        <div class="row">
+            <!-- Wrap each container with an anchor element -->
+            <a href="vvdoctlogin.html" class="container">
+                <img src="vvdoc.png" alt="Doctor Image">
+                <h2>DOCTOR</h2>
+                <!-- Content for Person 1 -->
+            </a>
+            <a href="hosplogin.html" class="container">
+                <img src="vvhosp.jpg" alt="Hospital Image">
+                <h2>HOSPITAL</h2>
+                <!-- Content for Person 2 -->
+            </a>
+            <a href="bloodlogin.html" class="container">
+                <img src="vvbloodd.png" alt="Blood Bank Image">
+                <h2>BLOOD BANK</h2>
+                <!-- Content for Person 3 -->
+            </a>
+        </div>
+        
+        <!-- Second Row -->
+        <div class="row">
+            <a href="organlogin.html" class="container">
+                <img src="vvorg.png" alt="Organ Bank Image">
+                <h2>ORGAN BANK</h2>
+                <!-- Content for Person 4 -->
+            </a>
+            <a href="loginpage.html" class="container">
+                <img src="vvmed.png" alt="Medical Shop Image">
+                <h2>MEDICAL SHOP</h2>
+                <!-- Content for Person 5 -->
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+
